@@ -1,6 +1,7 @@
 package cat.udl.eps.fragments.ejbase;
 
-import android.app.ListFragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.ListFragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,18 +15,18 @@ public class ListFrag extends ListFragment{
 	}
 
 	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
+	public void onViewCreated(@NonNull View v, Bundle savedInstanceState) {
+		super.onViewCreated(v, savedInstanceState);
 		String[] values = new String[] { "Enterprise", "Star Trek", "Next Generation", "Deep Space 9", "Voyager"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, values);
+		ArrayAdapter<String> adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
 	}
 
 	@Override
-	public void onListItemClick(ListView l, View v, int position, long id) {
+	public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
 		String item = (String) getListAdapter().getItem(position);
-		DetailFrag frag = (DetailFrag) getFragmentManager().findFragmentById(R.id.frag_capt);
-		if (frag != null && frag.isInLayout()) {
+		DetailFrag frag = (DetailFrag) getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_capt);
+		if (frag != null) { //&& frag.isInLayout()
 			frag.showText(getCapt(item));
 		}
 	}

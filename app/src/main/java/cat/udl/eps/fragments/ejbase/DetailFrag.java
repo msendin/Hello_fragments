@@ -1,6 +1,7 @@
 package cat.udl.eps.fragments.ejbase;
 
-import android.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,19 +16,17 @@ public class DetailFrag extends Fragment{
 	}
 
 	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-
+	public void onViewCreated(@NonNull View v, Bundle savedInstanceState) {
+		super.onViewCreated(v, savedInstanceState);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.detail_fragment, container, false);
-		return view;
+		return inflater.inflate(R.layout.detail_fragment, container, false);
 	}
 
 	public void showText(String item) {
-		TextView view = (TextView) getView().findViewById(R.id.captain);
+		TextView view = getView().findViewById(R.id.captain);
 		view.setText(item);
 	}
 }

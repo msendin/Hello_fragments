@@ -3,7 +3,9 @@ package cat.udl.eps.fragments.ejbase;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Main extends Activity {
+import androidx.fragment.app.FragmentActivity;
+
+public class Main extends FragmentActivity {
     
 	@Override
     public void onCreate(Bundle savedInstanceState) {
