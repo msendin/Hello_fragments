@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.Objects;
+
 public class ListFrag extends ListFragment{
 	
 	@Override
@@ -18,14 +20,14 @@ public class ListFrag extends ListFragment{
 	public void onViewCreated(@NonNull View v, Bundle savedInstanceState) {
 		super.onViewCreated(v, savedInstanceState);
 		String[] values = new String[] { "Enterprise", "Star Trek", "Next Generation", "Deep Space 9", "Voyager"};
-		ArrayAdapter<String> adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, values);
+		ArrayAdapter<String> adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
 	}
 
 	@Override
 	public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
-		String item = (String) getListAdapter().getItem(position);
-		DetailFrag frag = (DetailFrag) getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_capt);
+		String item = (String) Objects.requireNonNull(getListAdapter()).getItem(position);
+		DetailFrag frag = (DetailFrag) requireActivity().getSupportFragmentManager().findFragmentById(R.id.frag_capt);
 		if (frag != null) { //&& frag.isInLayout()
 			frag.showText(getCapt(item));
 		}

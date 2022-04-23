@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidStudioProjects.Hello_fragments.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidStudioProjects.Hello_fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hello_fragments.iml" filepath="$PROJECT_DIR$/Hello_fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Hello_fragments.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Hello_fragments.app.iml" />
     </modules>

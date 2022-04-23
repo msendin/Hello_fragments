@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class DetailFrag extends Fragment{
 
 	@Override
@@ -26,7 +28,7 @@ public class DetailFrag extends Fragment{
 	}
 
 	public void showText(String item) {
-		TextView view = getView().findViewById(R.id.captain);
+		TextView view = requireView().findViewById(R.id.captain);
 		view.setText(item);
 	}
 }
