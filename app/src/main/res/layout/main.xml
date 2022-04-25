@@ -12,7 +12,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frag_capt"
-        android:name="cat.udl.eps.fragments.ejbase.DetailFrag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:name="cat.udl.eps.fragments.ejbase.DetailFrag"/>
 </LinearLayout>

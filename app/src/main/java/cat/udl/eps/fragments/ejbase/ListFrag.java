@@ -12,11 +12,6 @@ import java.util.Objects;
 public class ListFrag extends ListFragment{
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-	}
-
-	@Override
 	public void onViewCreated(@NonNull View v, Bundle savedInstanceState) {
 		super.onViewCreated(v, savedInstanceState);
 		String[] values = new String[] { "Enterprise", "Star Trek", "Next Generation", "Deep Space 9", "Voyager"};
