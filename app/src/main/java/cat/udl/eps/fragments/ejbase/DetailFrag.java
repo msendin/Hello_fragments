@@ -15,6 +15,7 @@ public class DetailFrag extends Fragment{
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
 							 @Nullable Bundle savedInstanceState) {
+		//inflate the layout for this fragment
 		super.onCreateView(inflater, container, savedInstanceState);
 		return inflater.inflate(R.layout.detail_fragment, container, false);
 	}
